@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}入力完了{% endblock %}
+{% block page_title %}入力完了{% endblock %}
+{% block header_id %}header_toukuten{% endblock %} 
+{% block contents %}
+    <div class="post_success_div">
+        <div class="container">
+            <p class="sucess_text_p">点数の登録が完了しました。</p>
+            <div class="post_flex">
+                <li class="button"><a href="{% url 'oharaapp:index' %}">HOMEに戻る</a></li>
+                <li class="button"><a href="{% url 'oharaapp:tokuten' %}">入力を続ける</a></li>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

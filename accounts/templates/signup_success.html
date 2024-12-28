@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}signup_success{% endblock %}
+{% block page_title %}Sign up{% endblock page_title %}
+{% block header_id %}header_signup_success{% endblock %}
+{% block contents %}
+    <div class="signup_success_div">
+        <div class="container">
+            <p class='signup_success_text'>登録が完了しました</p>
+            <p class='signup_success_button button'><a href="{% url 'accounts:login' %}">ログインはこちらから</a></p>
+        </div>
+    </div>
+{% endblock %}

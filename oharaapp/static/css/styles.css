@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+body{
+    font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+.button:hover{
+    opacity: 0.8;
+    transform: scale(0.99);
+    transition: all 0.2s ease-in;
+
+}
+.button:active{
+    transform: scale(0.97);
+}
+
+/* ヘッダー */
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+header .container{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    max-width: none;
+}
+.logo_header img{
+    opacity: 0.9;
+    width: 80%;
+}
+.menu_nav{
+    margin: 0 0 0 auto;
+}
+.list_menu{
+    display: flex;
+    align-items: center;
+}
+.list_menu li{
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+/* メイン */
+.main_view{
+    background: url(../assets/img/twitter-coffee20.jpg);
+}
+.main_view .container{
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page_title{
+    font-size: 30px;
+}
+
+/* index */
+.else_login_button{
+    display: flex;
+    justify-content: center;
+}
+.else_login_button li{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: solid;
+    border-color: #8ea1b4;
+    width: 130px;
+    border-radius: 10px;
+    background-color: #FFF9F6;
+}
+.index_main_div p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.index_main_div span{
+    color: #8ea1b4;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.index_main_div{
+    text-align: center;
+}
+input{
+    background-color: #FFF9F6;
+    border: solid;
+    border-color: #8ea1b4;
+    border-radius: 5px;
+}
+select[name=subject]{
+    width: 50px;
+    text-align: center;
+}
+.tokuten_main_div{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.index_button_flex{
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+.index_button_flex li{
+    margin-left: 20px;
+    margin-right: 20px;
+    border: solid;
+    border-color: #8ea1b4;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #FFF9F6;
+}
+.index_main_div p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* 得点入力 */
+.tokuten_button{
+    border: solid;
+    border-color: #8ea1b4;
+    width: 60px;
+    border-radius: 10px;
+    background-color: #FFF9F6;
+}
+input[name=subject]{
+    margin-bottom: 8px;
+}
+
+/* 入力完了 */
+.post_flex{
+    display: flex;
+    justify-content: center;
+}
+.post_success_div {
+    text-align: center;
+    margin-top: 10px;
+}
+.post_success_div li{
+    border: solid;
+    border-color: #8ea1b4;
+    width: 130px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #FFF9F6;
+}
+/* サインアップ完了 */
+.signup_success_text{
+    text-align: center;
+}
+.signup_success_button{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: solid;
+    border-color: #8ea1b4;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #FFF9F6;
+}
+/* ログイン */
+.form_login{
+    text-align: center;
+}
+.login_text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.login_input{
+    margin-bottom: 8px;
+    margin-right: 60px;
+}
+.login_button{
+    margin-bottom: 10px;
+    width: 90px;
+}
+
+/* 一覧＆検索 */
+.toukuten_form,.post_div{
+    text-align: center;
+}
+.post_text{
+    margin-top: 10px;
+    width: 230px;
+    margin-left: 20px;
+}
+.sub-title{
+    font-size: 12px;
+    color: red;
+    margin-bottom: 10px;
+}
+.post_detail{
+    margin-bottom: 20px;
+    border: solid;
+    border-color: #8ea1b4;
+    width: 350px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.post_detail_p{
+    font-weight: 550;
+}
+
+/* マイページ */
+.mypage_main_div{
+    text-align: center;
+}
+.mypage_sub_div{
+    border: solid;
+    border-color: #8ea1b4;
+    width: 250px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mypage_main_div p{
+    margin-top: 5px;
+}
+/* footer */
+footer {
+    height: 30px;
+    background: #4c7c8a;
+    max-width: none;
+    text-align: center;
+    color: #FFF9F6;
+}

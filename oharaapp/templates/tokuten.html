@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}得点入力{% endblock %}
+{% block page_title %}得点入力{% endblock page_title %}
+{% block header_id %}header_tokuten{% endblock %}
+
+{% block contents %}
+    <div class="tokuten_main_div">
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                科目 {{form.subject}}
+                <br>
+                点数 {{form.num}}
+                <button type="submit" class="tokuten_button button">登録</button>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock%}

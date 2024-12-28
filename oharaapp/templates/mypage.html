@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}大原News{% endblock %}
+{% block page_title %}得点管理{% endblock page_title %}
+{% block header_id %}header_index{% endblock %}
+{% block contents %}
+    <div class="mypage_main_div">
+        <div class="container">
+            <p>{{ user }}さんの点数一覧</p>
+            {% for item in object_list %}
+                {% if user == item.user %}
+                    <div class="mypage_sub_div">【科目】: {{item.subject}}【点数】: {{item.num}}点</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

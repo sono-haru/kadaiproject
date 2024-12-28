@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">        
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="授業で作成したサイト">
+        <!-- lel=""	現在の文書から見たリンク先の関係 -->
+        <link rel="icon" type="image/png" href={% static "assets/img/favicon.png" %}>
+
+    <!--CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link  href="{% static "css/styles.css" %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo_header">
+                    <a href="{% url 'oharaapp:index' %}">
+                        <img src="{% static "assets/img/大原アイコン-removebg-preview.png" %}" alt="大原ロゴ" class="button">
+                    </a>
+                </div>            
+                <nav class="menu_nav">
+                    <ul class="list_menu">
+                        {% if user.is_authenticated %}
+                            <li class="button"><a href="{% url 'oharaapp:index' %}">HOME</a></li>
+                            <li class="button">
+                                <a href="{% url 'accounts:logout' %}" class="true_login_user_icon" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();">ログアウト</a>
+                                <form id="logoutForm" action="{% url 'accounts:logout' %}" method="POST">
+                                    {% csrf_token %}
+                                </form>
+                            </li>
+                        {% else %}
+                            <li><a href="{% url 'oharaapp:index' %}">HOME</a></li>
+                        {% endif %}
+                    </ul>
+                </nav> 
+            </div>
+        </header>
+        <main>
+            <div class="main_view">
+                <div class="container">
+                    <p class="page_title">{% block page_title %}{% endblock %}</p>
+                </div>
+            </div>
+            <!-- メインエリア部分 -->
+            {% block contents %}{% endblock %}
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="container">
+                    <p><small>&copy; 2024 sono_ohara</small></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

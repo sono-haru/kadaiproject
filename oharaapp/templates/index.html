@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}得点管理{% endblock %}
+{% block page_title %}得点管理{% endblock page_title %}
+{% block header_id %}header_index{% endblock %}
+{% block contents %}
+
+    <div class="index_main_div">
+        <div class="container">
+            <p><span>❁</span>このアプリは点数を入力して管理することができます。
+                <br><span>❁</span>入力する際は「科目名」と「点数」を入力してください。
+            </p>
+            {% if user.is_authenticated %}
+                <div class="index_button_flex">
+                    <li class="button"><a href="{% url 'oharaapp:mypage' %}" class="button_index">マイページ</a></li>
+                    <li class="button"><a href="{% url 'oharaapp:tokuten' %}" class="button_index">点数を入力</a></li>
+                    <li class="button"><a href="{% url 'oharaapp:detail' %}" class="button_index">検索</a></li>
+                </div>
+            {% else %}
+                <div class="else_login_button">
+                    <li class="button"><a href="{% url 'accounts:signup' %}">サインアップ</a></li>
+                    <li class="button"><a href="{% url 'accounts:login' %}">ログイン</a></li>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
